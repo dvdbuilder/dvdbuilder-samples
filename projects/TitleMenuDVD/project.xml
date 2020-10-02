@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dvd version='2.3' xmlns='http://www.primosoftware.com/dvdbuilder/2.3'>
+  <videoManager firstPlayNavigate='Menu=1001;'>
+	  <menus>
+		<menu id='1001' entry='title'>
+		  <background file='Menu_NTSC.mpg' />
+		  <button left='130' top='150' width='200' height='150' navigate='Title=1;' />
+		  <button left='370' top='150' width='200' height='150' navigate='Title=2;' />
+		  <mask
+			file='Menu_NTSC_Mask.bmp'
+			patternColor    ='#FF0000'
+			backgroundColor ='#000000'
+			emphasisColor1  ='#00FF00'
+			emphasisColor2  ='#0000FF' />
+		  <display
+			patternColor   ='#FFFFFF' patternContrast   ='3'
+			backgroundColor='#000000' backgroundContrast='0'
+			emphasis1Color ='#000000' emphasis1Contrast ='0'
+			emphasis2Color ='#000000' emphasis2Contrast ='0'/>
+		  <selection
+			patternColor   ='#000000' patternContrast   ='0'
+			backgroundColor='#000000' backgroundContrast='0'
+			emphasis1Color ='#FF00FF' emphasis1Contrast ='15'
+			emphasis2Color ='#000000' emphasis2Contrast ='0'/>
+		  <action
+			patternColor   ='#000000' patternContrast   ='0'
+			backgroundColor='#000000' backgroundContrast='0'
+			emphasis1Color ='#FF00FF' emphasis1Contrast ='15'
+			emphasis2Color ='#FFFF00' emphasis2Contrast ='10'/>
+		</menu>
+	  </menus>
+  </videoManager>
+  <titleSet>
+    <titles>
+      <title id='1' chapters='00:00:00;'>
+        <videoObject file='Elephant.mpg'/>
+      </title>
+      <title id='2' chapters='00:00:00;'>
+        <videoObject file='Hippo.mpg'/>
+      </title>
+    </titles>
+  </titleSet>
+</dvd>

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dvd version='2.3' xmlns='http://www.primosoftware.com/dvdbuilder/2.3'>
+  <videoManager firstPlayNavigate='Title=1'/>
+  <titleSet>
+    <subpictureStreams>
+      <!--
+        Declare subtitle streams for the DVD menu
+        Actual streams will be passed in the videoObject of each title below
+      -->
+      <!-- Spanish, French and Portuguese subtitles -->
+      <stream languageCode="ES" mpegStreamID="0xBD" mpegSubstreamID="0x20"/>
+      <stream languageCode="FR" mpegStreamID="0xBD" mpegSubstreamID="0x21"/>
+      <stream languageCode="PT" mpegStreamID="0xBD" mpegSubstreamID="0x22"/>
+    </subpictureStreams>
+    <titles>
+      <title id='1' chapters='00:00:00;'>
+        <videoObject file='movie.mpg'>
+          <!--
+            Add subtitle streams. The order and streams must match the streams from the titleSet above:
+              spanish_sub.mpg   - encoded from spanish/spanish.stl
+              french_sub.mpg    - encoded from french/french.stl
+              portuguese_sub.mpg - encoded from portuguese/portuguese.stl 
+          -->
+          <subpictureStream file='spanish_sub.mpg' />
+          <subpictureStream file='french_sub.mpg' />
+          <subpictureStream file='portuguese_sub.mpg' />
+        </videoObject>
+        <subpicturePalette>
+          <!-- Not used - black -->
+          <color index="0" value="#000000" />
+          <!-- Text color - white -->
+          <color index="1" value="#FFFFFF" />
+          <!-- Text outer outline color / outline 1 - off-black -->
+          <color index="2" value="#202020" />
+          <!-- Text inner outline color / outline 2 - gray -->
+          <color index="3" value="#808080" />
+          <!-- 
+            Text background color - blue
+            This should not be visible unless you set $BackgroundContrast to > 0 in the source STL file 
+          -->
+          <color index="4" value="#0000FF" />
+        </subpicturePalette>
+      </title>
+    </titles>
+  </titleSet>
+</dvd>

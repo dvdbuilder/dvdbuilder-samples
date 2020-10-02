@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dvd version="2.1.2.1" xmlns="http://www.primosoftware.com/dvdbuilder">
+
+<!-- 
+	If (GPRM11 == 1) select default language
+-->
+
+  <videoManager>
+    <firstPlayCommands>
+	
+	  <!-- Set default language flag-->
+	  <command>
+		<!-- GPRM11 = 1, 71 00 00 0B 00 01 00 00 -->
+		<opcode>[0x71][0x00][0x00][0x0B][0x00][0x01][0x00][0x00]</opcode>
+	  </command>
+	
+      <command>
+        <opcode>[0x30][0x06][0x00][0x01][0x01][0x85][0x00][0x00]</opcode>
+        <!-- JumpSS VTSM (vts 1, tt 1, menu AUDIO), 30 06 00 01 01 85 00 00 -->
+      </command>
+    </firstPlayCommands>
+	
+  </videoManager>
+  <titleSet>
+    <menus>
+      <menu id="101" entry="audio">
+        <mask patternColor="#000000" backgroundColor="#FFFFFF" emphasisColor1="#000001" emphasisColor2="#000002" file="Menus\menu1_mask.bmp" />
+        <display emphasis2Contrast="15" emphasis1Contrast="15" backgroundContrast="0" patternContrast="0" emphasis2Color="#141414" emphasis1Color="#CCCCCC" backgroundColor="#141414" patternColor="#999900" />
+        <action emphasis2Contrast="15" emphasis1Contrast="15" backgroundContrast="0" patternContrast="15" emphasis2Color="#141414" emphasis1Color="#CCCCCC" backgroundColor="#141414" patternColor="#EBEB2E" />
+        <selection emphasis2Contrast="15" emphasis1Contrast="15" backgroundContrast="0" patternContrast="15" emphasis2Color="#141414" emphasis1Color="#CCCCCC" backgroundColor="#141414" patternColor="#24E624" />
+        <background file="Menus\menu1.mpg" />
+		
+		<!-- English -->
+        <button left="95" top="173" width="250" height="75">
+          <command>
+            <!-- SetSTN (audio=1), LinkPGCN 2 -->
+            <opcode>[0x51][0x04][0x00][0x80][0x00][0x00][0x00][0x02]</opcode>
+          </command>
+        </button>
+
+		<!-- French -->
+        <button left="95" top="262" width="250" height="75">
+          <command>
+            <!-- SetSTN (audio=2), LinkPGCN 2 -->
+            <opcode>[0x51][0x04][0x00][0x81][0x00][0x00][0x00][0x02]</opcode>
+          </command>
+        </button>
+		
+		<!-- German -->
+        <button left="95" top="341" width="250" height="75">
+          <command>
+            <!-- SetSTN (audio=3), LinkPGCN 2 -->
+            <opcode>[0x51][0x04][0x00][0x82][0x00][0x00][0x00][0x02]</opcode>
+          </command>
+        </button>
+		
+        <preCommands>
+		
+		  <!-- Set default language -->
+			  <command>
+				<!-- GPRM0 = 0, 71 00 00 00 00 00 00 00 -->
+				<opcode>[0x71][0x00][0x00][0x00][0x00][0x00][0x00][0x00]</opcode>
+			  </command>
+			
+			  <command>
+				<!-- If (GPRM11 != GPRM0) SetSTN audio=1, 51 30 00 80 00 00 0B 00 -->
+				<opcode>[0x51][0x30][0x00][0x80][0x00][0x00][0x0B][0x00]</opcode>
+			  </command>
+				
+			  <command>
+				<!-- GPRM11 = 0, 71 00 00 0B 00 00 00 00 -->
+				<opcode>[0x71][0x00][0x00][0x0B][0x00][0x00][0x00][0x00]</opcode>
+			</command>
+		
+		
+		<!-- Highlight selected language -->
+			  <command>
+				<!-- GPRM1 = SPRM1  61 00 00 01 00 81 00 00 -->
+				<opcode>[0x61][0x00][0x00][0x01][0x00][0x81][0x00][0x00]</opcode>
+			  </command>
+			  
+			  <!-- GPRM1 += 1  73 00 00 01 00 01 00 00  -->
+			  <command>
+				<opcode>[0x73][0x00][0x00][0x01][0x00][0x01][0x00][0x00]</opcode>
+			  </command>
+			  
+			  <!-- GPRM1 *= 1024  75 00 00 01 04 00 00 00   -->
+			  <command>
+				<opcode>[0x75][0x00][0x00][0x01][0x04][0x00][0x00][0x00]</opcode>
+			  </command>
+			  
+			  <!-- SetHL_BTN GPRM1  46 00 00 00 00 01 00 00 -->
+			  <command>
+				<opcode>[0x46][0x00][0x00][0x00][0x00][0x01][0x00][0x00]</opcode>
+			  </command>
+        </preCommands>
+		
+      </menu>
+
+     <menu id="102" entry="root">
+        <mask patternColor="#000000" backgroundColor="#FFFFFF" emphasisColor1="#000001" emphasisColor2="#000002" file="Menus\menu2_mask.bmp" />
+        <display emphasis2Contrast="15" emphasis1Contrast="15" backgroundContrast="0" patternContrast="0" emphasis2Color="#141414" emphasis1Color="#CCCCCC" backgroundColor="#141414" patternColor="#999900" />
+        <action emphasis2Contrast="15" emphasis1Contrast="15" backgroundContrast="0" patternContrast="15" emphasis2Color="#141414" emphasis1Color="#CCCCCC" backgroundColor="#141414" patternColor="#EBEB2E" />
+        <selection emphasis2Contrast="15" emphasis1Contrast="15" backgroundContrast="0" patternContrast="15" emphasis2Color="#141414" emphasis1Color="#CCCCCC" backgroundColor="#141414" patternColor="#24E624" />
+        <background file="Menus\menu2.mpg" />
+		
+		<!-- Title 1 -->
+        <button left="100" top="272" width="170" height="50" navigate="Title = 1; Chapter = 1;">
+        </button>
+		
+		<!-- Title 2 -->
+        <button left="100" top="386" width="170" height="50" navigate="Title = 2; Chapter = 1;">
+        </button>
+		
+		<!-- Back -->
+        <button left="520" top="464" width="100" height="35" navigate="Menu = 101;">
+        </button>
+		
+        <preCommands>
+		
+		<!-- Highlight Title1 button -->
+			  <command>
+				<!-- GPRM1 = 1  71 00 00 01 00 01 00 00 -->
+				<opcode>[0x71][0x00][0x00][0x01][0x00][0x01][0x00][0x00]</opcode>
+			  </command>
+			  
+			  <!-- GPRM1 *= 1024  75 00 00 01 04 00 00 00   -->
+			  <command>
+				<opcode>[0x75][0x00][0x00][0x01][0x04][0x00][0x00][0x00]</opcode>
+			  </command>
+			  
+			  <!-- SetHL_BTN GPRM1  46 00 00 00 00 01 00 00 -->
+			  <command>
+				<opcode>[0x46][0x00][0x00][0x00][0x00][0x01][0x00][0x00]</opcode>
+			</command>
+			
+        </preCommands>
+      </menu>
+	</menus>
+
+	
+    <audioStreams>
+	  <!-- 1. English -->
+      <stream languageCode="EN" mpegStreamID="0xC0"/>
+      
+	  <!-- 2. French -->
+      <stream languageCode="FR" mpegStreamID="0xC1"/>
+      
+	  <!-- 3. German -->
+      <stream languageCode="DE" mpegStreamID="0xC2"/>
+    </audioStreams>
+	
+    <titles>
+      <title id="1" chapters="00:00:00">
+        <videoObject>
+		  <videoStream file="Videos\SuperSpeedway_01.m2v" />
+		  <audioStream file="Videos\SuperSpeedway_01_en.mp2" format="MPA" />
+		  <audioStream file="Videos\SuperSpeedway_01_fr.mp2" format="MPA" />
+		  <audioStream file="Videos\SuperSpeedway_01_de.mp2" format="MPA" />
+		</videoObject>
+		
+        <postCommands>
+          <command>
+            <!-- CallSS VTSM (menu ROOT, rsm_cell 1), 30 08 00 00 01 83 00 00 -->
+            <opcode>[0x30][0x08][0x00][0x00][0x01][0x83][0x00][0x00]</opcode>
+          </command>
+        </postCommands>
+      </title>
+	  
+      <title id="2" chapters="00:00:00">
+        <videoObject>
+		  <videoStream file="Videos\SuperSpeedway_02.m2v" />
+		  <audioStream file="Videos\SuperSpeedway_02_en.mp2" format="MPA" />
+		  <audioStream file="Videos\SuperSpeedway_02_fr.mp2" format="MPA" />
+		  <audioStream file="Videos\SuperSpeedway_02_de.mp2" format="MPA" />
+		</videoObject>
+		
+        <postCommands>
+          <command>
+            <!-- CallSS VTSM (menu ROOT, rsm_cell 1), 30 08 00 00 01 83 00 00 -->
+            <opcode>[0x30][0x08][0x00][0x00][0x01][0x83][0x00][0x00]</opcode>
+          </command>
+        </postCommands>
+      </title>
+	  
+    </titles>
+	
+  </titleSet>
+</dvd>

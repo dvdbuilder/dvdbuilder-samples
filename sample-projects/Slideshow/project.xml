@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dvd version="2.3" xmlns="http://www.primosoftware.com/dvdbuilder/2.3">
+  <videoManager firstPlayNavigate="Menu = 1">
+  </videoManager>
+  <titleSet>
+    <titles>
+	
+      <title id="1" postNavigate="Menu = 1" chapters="00:00:00; 00:00:05;">
+        <videoObject file="movie1.mpg" />
+      </title>
+	  
+      <title id="2" postNavigate="Menu = 1" chapters="00:00:00; 00:00:05; 00:00:10;">
+        <videoObject file="movie2.mpg" />
+      </title>
+	  
+    </titles>
+    <menus>
+      <menu id="1" entry="root">
+        <button left="105" top="136" width="146" height="32" navigate="Title = 1; Chapter=1"/>
+        <button left="104" top="215" width="210" height="32" navigate="Title = 2; Chapter=1"/>
+
+        <background file="menu.mpg" />
+        
+        <mask file="menu_mask.bmp" backgroundColor="#FFFFFF" patternColor="#000000" emphasisColor1="#000000" emphasisColor2="#000000" />
+
+        <display   backgroundColor="#000000" backgroundContrast="0" patternColor="#000000" patternContrast="0"  emphasis1Color="#000000" emphasis1Contrast="0" emphasis2Color="#000000" emphasis2Contrast="0" />
+        <selection backgroundColor="#000000" backgroundContrast="0" patternColor="#FF0000" patternContrast="15" emphasis1Color="#000000" emphasis1Contrast="0" emphasis2Color="#000000" emphasis2Contrast="0" />
+        <action    backgroundColor="#000000" backgroundContrast="0" patternColor="#0000FF" patternContrast="15" emphasis2Color="#000000" emphasis2Contrast="0" emphasis1Color="#000000" emphasis1Contrast="0" />
+      </menu>
+    </menus>
+  </titleSet>
+</dvd>

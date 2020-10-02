@@ -1,0 +1,213 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""VideoToDVD.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "VideoToDVD.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_VIDEOTODVD_DIALOG DIALOGEX 0, 0, 487, 373
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "VideoToDVD"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Input Files",IDC_STATIC,7,7,471,124
+    CONTROL         "",IDC_LIST_INPUT_FILES,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,12,16,462,89
+    PUSHBUTTON      "Clear Files",IDC_BUTTON_CLEAR_FILES,423,111,50,14
+    PUSHBUTTON      "Add Files",IDC_BUTTON_ADD_FILES,361,111,50,14
+    GROUPBOX        "Intermediate Files",IDC_STATIC,7,137,473,51
+    LTEXT           "DVDB project folder:",IDC_STATIC,17,154,66,8
+    LTEXT           "VIDEO_TS folder:",IDC_STATIC,17,170,57,8
+    EDITTEXT        IDC_EDIT_DVDB_PROJECT_FOLDER,89,149,326,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VIDEO_TS_FOLDER,89,166,326,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSE_VIDEO_TS_FOLDER,424,168,50,14
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSE_DVDB_PROJECT_FOLDER,424,147,50,14
+    GROUPBOX        "DVD-Video Settings",IDC_STATIC,7,191,125,63
+    LTEXT           "TV System:",IDC_STATIC,17,211,37,8
+    COMBOBOX        IDC_COMBO_TV_SYSTEM,60,209,48,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Burn Settings",IDC_STATIC,139,192,341,63
+    LTEXT           "Device:",IDC_STATIC,147,207,25,8
+    LTEXT           "Media:",IDC_STATIC,147,221,22,8
+    LTEXT           "Volume name:",IDC_STATIC,147,237,46,8
+    COMBOBOX        IDC_COMBO_DEVICES,203,206,269,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_STATIC_MEDIA,203,221,269,11,0,WS_EX_STATICEDGE
+    LTEXT           "Free space:",IDC_STATIC,319,237,39,8
+    EDITTEXT        IDC_EDIT_VOLUME_NAME,203,235,107,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_STATIC_FREE_SPACE,370,236,96,13,0,WS_EX_STATICEDGE
+    CONTROL         "",IDC_PROGRESS_BAR,"msctls_progress32",WS_BORDER,7,320,473,14
+    CONTROL         "",IDC_LIST_EVENT,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,258,473,58
+    PUSHBUTTON      "Create DVDB project",IDC_BUTTON_CREATE_DVDB_PROJECT,8,346,81,14
+    PUSHBUTTON      "Create VIDEO_TS folder",IDC_BUTTON_CREATE_VIDEO_TS_FOLDER,105,346,82,14
+    PUSHBUTTON      "Create DVD Image",IDC_BUTTON_CREATE_DISC_IMAGE,205,346,81,14
+    PUSHBUTTON      "Burn DVD Disc",IDC_BUTTON_CREATE_DVDVIDEO_DISC,302,346,81,14
+    PUSHBUTTON      "Stop",IDC_BUTTON_STOP,429,346,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Primo Software"
+            VALUE "FileDescription", "VideoToDVD Sample"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "VideoToDVD.exe"
+            VALUE "LegalCopyright", " (c) Primo Software.  All rights reserved."
+            VALUE "OriginalFilename", "VideoToDVD.exe"
+            VALUE "ProductName", "VideoToDVD"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_VIDEOTODVD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 480
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 366
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_VIDEOTODVD_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_TV_SYSTEM, 0x403, 5, 0
+0x544e, 0x4353, "\000" 
+    IDC_COMBO_TV_SYSTEM, 0x403, 4, 0
+0x4150, 0x004c, 
+    0
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "VideoToDVD.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

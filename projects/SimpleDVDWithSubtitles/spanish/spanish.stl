@@ -1,0 +1,64 @@
+// See:
+// http://wiki.dvdbuilder.com/dvd-projects/subtitles/subtitle-format
+
+// Language:  Spanish
+// Subtitles: 20
+
+// Start:     00:01:57:04
+// End:       00:03:12:20
+
+// Font:      Arial, Size: 42
+
+// TIFF Palette
+// Kind Red Green Blue Contrast
+// PA 0 0 255 0 (text color - blue)
+// E1 255 0 0 0 (text outer outline color - red)
+// E2 0 0 0 0 (text inner outline color - black)
+// BG 255 255 255 0 (background - white)
+
+// Commands
+// 
+
+// Color
+$ColorIndex1 = 1
+$ColorIndex2 = 2
+$ColorIndex3 = 3
+$ColorIndex4 = 4
+
+// Contrast
+$TextContrast = 15
+$Outline1Contrast = 15
+$Outline2Contrast = 0
+$BackgroundContrast = 0
+
+// Do not force display
+$ForceDisplay = False
+
+// Entries
+// 
+$SetFilePathToken = <<>>
+
+// Filler subtitle
+00:00:00:00 , 00:01:57:03 , <<>> spanish0000.tif
+
+// Real subtitles
+00:01:57:04 , 00:01:58:16 , <<>> spanish0001.tif
+00:02:01:24 , 00:02:03:20 , <<>> spanish0002.tif
+00:02:03:23 , 00:02:06:21 , <<>> spanish0003.tif
+00:02:06:24 , 00:02:10:06 , <<>> spanish0004.tif
+00:02:10:08 , 00:02:13:10 , <<>> spanish0005.tif
+00:02:13:13 , 00:02:15:27 , <<>> spanish0006.tif
+00:02:15:28 , 00:02:18:10 , <<>> spanish0007.tif
+00:02:18:13 , 00:02:20:27 , <<>> spanish0008.tif
+00:02:20:29 , 00:02:24:27 , <<>> spanish0009.tif
+00:02:24:28 , 00:02:27:22 , <<>> spanish0010.tif
+00:02:27:23 , 00:02:30:06 , <<>> spanish0011.tif
+00:02:30:09 , 00:02:33:22 , <<>> spanish0012.tif
+00:02:36:02 , 00:02:37:23 , <<>> spanish0013.tif
+00:02:43:18 , 00:02:45:03 , <<>> spanish0014.tif
+00:02:50:00 , 00:02:51:26 , <<>> spanish0015.tif
+00:02:51:28 , 00:02:54:01 , <<>> spanish0016.tif
+00:02:59:03 , 00:03:01:29 , <<>> spanish0017.tif
+00:03:02:01 , 00:03:05:11 , <<>> spanish0018.tif
+00:03:05:12 , 00:03:07:20 , <<>> spanish0019.tif
+00:03:08:24 , 00:03:12:20 , <<>> spanish0020.tif

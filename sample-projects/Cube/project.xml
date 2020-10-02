@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dvd version='2.3' xmlns='http://www.primosoftware.com/dvdbuilder/2.3'>
+  <videoManager firstPlayNavigate='Title=1'/>
+  <titleSet>
+    <titles>
+      <title id='1' chapters='00:00:00;'>
+        <videoObject file='Cube.mpg'/>
+      </title>
+    </titles>
+  </titleSet>
+</dvd>

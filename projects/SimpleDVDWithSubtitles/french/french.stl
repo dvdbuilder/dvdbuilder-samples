@@ -1,0 +1,66 @@
+// See:
+// http://wiki.dvdbuilder.com/dvd-projects/subtitles/subtitle-format
+
+// Language:  French
+// Subtitles: 20
+
+// Start:     00:01:57:02
+// End:       00:03:12:14
+
+// Font:      Arial, Size: 42
+
+// TIFF Palette
+// Kind Red Green Blue Contrast
+// PA 0 0 255 0 (text color - blue)
+// E1 255 0 0 0 (text outer outline color - red)
+// E2 0 0 0 0 (text inner outline color - black)
+// BG 255 255 255 0 (background - white)
+
+// Commands
+// 
+
+// Color
+$ColorIndex1 = 1
+$ColorIndex2 = 2
+$ColorIndex3 = 3
+$ColorIndex4 = 4
+
+// Contrast
+$TextContrast = 15
+$Outline1Contrast = 15
+$Outline2Contrast = 0
+$BackgroundContrast = 0
+
+// Do not force display
+$ForceDisplay = False
+
+// Entries
+// 
+$SetFilePathToken = <<>>
+
+// Empty filler subtitle between start of the movie and the first real subtitle. 
+// This is required by the DVDBuilder multiplexer.
+// `french0000.tif` should be a blank image with white background
+00:00:00:00	,	00:01:57:01	, <<>> french0000.tif
+
+// Real subtitles
+00:01:57:02	,	00:01:58:14	, <<>> french0001.tif
+00:02:01:20	,	00:02:03:16	, <<>> french0002.tif
+00:02:03:19	,	00:02:06:17	, <<>> french0003.tif
+00:02:06:20	,	00:02:10:02	, <<>> french0004.tif
+00:02:10:04	,	00:02:13:06	, <<>> french0005.tif
+00:02:13:09	,	00:02:15:23	, <<>> french0006.tif
+00:02:15:24	,	00:02:18:06	, <<>> french0007.tif
+00:02:18:09	,	00:02:20:23	, <<>> french0008.tif
+00:02:20:25	,	00:02:24:23	, <<>> french0009.tif
+00:02:24:24	,	00:02:27:18	, <<>> french0010.tif
+00:02:27:19	,	00:02:30:02	, <<>> french0011.tif
+00:02:30:05	,	00:02:33:18	, <<>> french0012.tif
+00:02:35:28	,	00:02:37:19	, <<>> french0013.tif
+00:02:43:14	,	00:02:44:29	, <<>> french0014.tif
+00:02:49:26	,	00:02:51:22	, <<>> french0015.tif
+00:02:51:24	,	00:02:53:27	, <<>> french0016.tif
+00:02:58:29	,	00:03:01:23	, <<>> french0017.tif
+00:03:01:25	,	00:03:05:05	, <<>> french0018.tif
+00:03:05:06	,	00:03:07:14	, <<>> french0019.tif
+00:03:08:18	,	00:03:12:14	, <<>> french0020.tif
